@@ -2,16 +2,24 @@
   class="navbar navbar-expand-lg navbar-dark accent shadow sticky-top svelte-s88tlw"
 >
   <a
-    routerLink="/" routerLinkActive="router-link-active"
-
-    class="navbar-brand display-4 text-uppercase svelte-s88tlw"
-    ><img
-      src="assets/pictures/fabric-io.png"
-      height="24"
-      alt="logo"
-      class="mr-2"
-    />fabric-io</a
+    routerLink="/"
+    routerLinkActive="router-link-active"
+    class="navbar-brand display-4 text-uppercase"
   >
+    <img
+      src="assets/pictures/logo/eagle logo - purple bg copie.png"
+      height="32"
+      alt="logo"
+      class="mx-1"
+    />
+    <!-- <div class="border-gray border-1">
+
+    </div> -->
+    <!-- <span class="px-1"> -->
+    fabric-io
+
+    <!-- </span> -->
+  </a>
   <button
     aria-controls="navbarSupportedContent"
     aria-expanded="false"
@@ -25,49 +33,35 @@
   </button>
   <div class="text-center navbar-collapse collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto svelte-s88tlw">
-      <li
+      <li *ngFor="let link of links"
         class="nav-item text-uppercase font-weight-light active svelte-s88tlw"
       >
-        <a routerLink="" class="nav-link svelte-s88tlw"
-          >accueil</a
-        >
+        <a [ngClass]="{active: active}" routerLinkActive="exact" [routerLink]="link.path" class="nav-link svelte-s88tlw">{{link.title}}</a>
+      </li>
+      <!-- <li
+        class="nav-item text-uppercase font-weight-light active svelte-s88tlw"
+      >
+        <a routerLink="" class="nav-link svelte-s88tlw">accueil</a>
       </li>
       <li class="nav-item text-uppercase font-weight-light svelte-s88tlw">
-        <a
-        routerLink="/services"
-          class="nav-link svelte-s88tlw"
-          >services</a
-        >
+        <a routerLink="/services" class="nav-link svelte-s88tlw">services</a>
       </li>
       <li class="nav-item text-uppercase font-weight-light svelte-s88tlw">
-        <a
-        routerLink="/skills"
-          class="nav-link svelte-s88tlw"
-          >compétences</a
-        >
+        <a routerLink="/skills" class="nav-link svelte-s88tlw">compétences</a>
       </li>
       <li class="nav-item text-uppercase font-weight-light svelte-s88tlw">
-        <a
-        routerLink="/portfolio"
-          class="nav-link svelte-s88tlw"
-          rel="prefetch"
+        <a routerLink="/portfolio" class="nav-link svelte-s88tlw" rel="prefetch"
           >portfolio</a
         >
       </li>
       <li class="nav-item text-uppercase font-weight-light svelte-s88tlw">
-        <a
-        routerLink="/contact"
-          class="nav-link svelte-s88tlw"
+        <a routerLink="/contact" class="nav-link svelte-s88tlw"
           >contactez-moi</a
         >
       </li>
       <li class="nav-item text-uppercase font-weight-light svelte-s88tlw">
-        <a
-        routerLink="/about"
-          class="nav-link svelte-s88tlw"
-          >à propos</a
-        >
-      </li>
+        <a routerLink="/about" class="nav-link svelte-s88tlw">à propos</a>
+      </li> -->
     </ul>
     <!-- <div>
       <div class="collapse show" id="clock">

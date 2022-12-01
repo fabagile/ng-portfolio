@@ -1,22 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 app-root {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
   min-height: 100vh;
   /* align-items: stretch; */
-
 }
+
+:root {
+  --primary: #6667ab !important;
+  --secondary: #999854 !important;
+}
+.bg-primary,
+.btn-primary {
+  background: var(--primary) !important;
+}
+.border-primary {
+  border-color: var(--primary) !important;
+}
+
+.btn-shadow {
+  text-shadow: 1px 1px 1px var(--secondary) !important;
+}
+
 main {
   flex: 1;
+}
+p {
+  text-align: justify;
 }
 app-error-page {
   align-self: center;
   justify-self: stretch;
 }
 .accent {
-  background-color: #6667ab;
+  background-color: var(--primary);
+}
+.accent-reverse {
+  color: var(--secondary);
 }
 a {
-  color: #888956;
+  color: var(--secondary);
+}
+.flip {
+  transform: scaleX(-1);
+  /*transform: rotateY('180deg');
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  */
 }
