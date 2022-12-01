@@ -1,1 +1,78 @@
-<p>navbar works!</p>
+<nav
+  class="navbar navbar-expand-lg navbar-dark accent shadow sticky-top svelte-s88tlw"
+>
+  <a
+    routerLink="/" routerLinkActive="router-link-active"
+
+    class="navbar-brand display-4 text-uppercase svelte-s88tlw"
+    ><img
+      src="assets/pictures/fabric-io.png"
+      height="24"
+      alt="logo"
+      class="mr-2"
+    />fabric-io</a
+  >
+  <button
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    class="navbar-toggler"
+    data-target="#navbarSupportedContent"
+    data-toggle="collapse"
+    type="button"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="text-center navbar-collapse collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto svelte-s88tlw">
+      <li
+        class="nav-item text-uppercase font-weight-light active svelte-s88tlw"
+      >
+        <a routerLink="" class="nav-link svelte-s88tlw"
+          >accueil</a
+        >
+      </li>
+      <li class="nav-item text-uppercase font-weight-light svelte-s88tlw">
+        <a
+        routerLink="/services"
+          class="nav-link svelte-s88tlw"
+          >services</a
+        >
+      </li>
+      <li class="nav-item text-uppercase font-weight-light svelte-s88tlw">
+        <a
+        routerLink="/skills"
+          class="nav-link svelte-s88tlw"
+          >compétences</a
+        >
+      </li>
+      <li class="nav-item text-uppercase font-weight-light svelte-s88tlw">
+        <a
+        routerLink="/portfolio"
+          class="nav-link svelte-s88tlw"
+          rel="prefetch"
+          >portfolio</a
+        >
+      </li>
+      <li class="nav-item text-uppercase font-weight-light svelte-s88tlw">
+        <a
+        routerLink="/contact"
+          class="nav-link svelte-s88tlw"
+          >contactez-moi</a
+        >
+      </li>
+      <li class="nav-item text-uppercase font-weight-light svelte-s88tlw">
+        <a
+        routerLink="/about"
+          class="nav-link svelte-s88tlw"
+          >à propos</a
+        >
+      </li>
+    </ul>
+    <!-- <div>
+      <div class="collapse show" id="clock">
+        <div class="text-light">9:28</div>
+      </div>
+    </div> -->
+  </div>
+</nav>

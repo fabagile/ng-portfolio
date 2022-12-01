@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+app-root {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  min-height: 100vh;
+  /* align-items: stretch; */
+
+}
+main {
+  flex: 1;
+}
+app-error-page {
+  align-self: center;
+  justify-self: stretch;
+}
+.accent {
+  background-color: #6667ab;
+}
+a {
+  color: #888956;
+}
