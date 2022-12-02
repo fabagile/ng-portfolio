@@ -1,8 +1,48 @@
+<div class="container-md">
 <div class="text-center mt-5 mb-4">
   <h1 class="svelte-1q5hf50">Portfolio</h1>
 </div>
-<h2 class="text-center mb-3">Sites réalisés:</h2>
-<div class="row">
+<div *ngFor="let release of releases">
+  <h2 class="text-center mb-3">{{release.category}}:</h2>
+  <div class="row">
+    <div *ngFor="let item of release.items" class="col-4 text-center">
+      <div   class="card mx-auto m-3 svelte-1utcuv0">
+        <img
+          class="card-top-img py-1 px-2 rounded-lg svelte-1utcuv0"
+          [src]="item.img"
+          [alt]="item.label"
+        />
+        <div class="card-header p-0 m-0">
+          <div class="frame svelte-1utcuv0">
+          </div>
+          <div class="card-body">
+            <div class="card-text">{{item.label}}</div>
+          </div>
+        </div>
+        <div class="card-footer p-0">
+          <div class="btn-group d-flex">
+            <a
+              class="btn btn-primary bg-gradient text-uppercase fs-5 m-1"
+              [href]="item.url"
+              target="_blank"
+              >visiter</a
+            >
+            <!-- <a
+              class="btn btn-info"
+              [routerLink]="item.detailPath"
+              target="_blank"
+              >détail</a
+            > -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- <h2 class="text-center mb-3">Sites réalisés:</h2> -->
+<!-- <div class="row">
   <div class="col-lg-4 col-md-12 col-sm-12 text-center">
     <div class="card mx-auto m-3 svelte-1utcuv0">
       <img
@@ -160,3 +200,4 @@
     </div>
   </div>
 </div>
+</div> -->

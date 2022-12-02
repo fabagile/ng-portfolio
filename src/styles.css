@@ -16,12 +16,35 @@ app-root {
 .btn-primary {
   background: var(--primary) !important;
 }
+.btn-primary {
+  border-color: var(--secondary) !important;
+
+}
+
+.bg-secondary {
+background: var(--secondary) !important;
+
+}
 .border-primary {
   border-color: var(--primary) !important;
 }
 
 .btn-shadow {
   text-shadow: 1px 1px 1px var(--secondary) !important;
+}
+
+a, .btn,
+a:hover, .btn:hover {
+  transition:all 200ms linear 50ms;
+
+  -webkit-transition:all 200ms linear 50ms;
+  -moz-transition:all 200ms linear 50ms;
+  -ms-transition:all 200ms linear 50ms;
+  -o-transition:all 200ms linear 50ms;
+}
+a:hover, .btn-primary:hover {
+  background: var(--secondary) !important;
+  border-color: var(--primary) !important;
 }
 
 main {
@@ -51,4 +74,8 @@ a {
   -ms-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   */
+}
+
+.nav-tag {
+  display: none;
 }

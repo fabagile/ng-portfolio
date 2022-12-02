@@ -7,8 +7,12 @@ import { routes } from 'src/app/routes';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  collapse=true
   links = routes
   active=false
+  toggleCollapse(){
+    this.collapse = !this.collapse
+  }
 
   constructor() { }
 
