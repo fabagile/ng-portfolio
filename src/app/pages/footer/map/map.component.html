@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="text-center mt-5 mb-4">
+    <h1 class="svelte-1q5hf50">Plan du site</h1>
+    <h2 class="svelte-1q5hf50">Pour garder le nord</h2>
+  </div>
+  <div class="row">
+    <div class="col">
+      <dl *ngFor="let link of mainLinks">
+        <dt>
+          <a [routerLink]="link.path" class="svelte-uo1qlm">{{ link.label }}</a>
+        </dt>
+        <dd class="svelte-uo1qlm">{{ link.desc }}</dd>
+      </dl>
+    </div>
+    <div class="col">
+      <dl *ngFor="let link of footerLinks">
+        <dt>
+          <a [routerLink]="link.path" class="svelte-uo1qlm">{{ link.label }}</a>
+        </dt>
+        <dd class="svelte-uo1qlm">{{ link.desc }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

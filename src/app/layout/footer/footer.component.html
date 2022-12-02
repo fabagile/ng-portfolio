@@ -1,89 +1,35 @@
 <footer class="accent px-1 py-2 text-white">
-  <div class="container ">
+  <div class="container">
     <div class="d-flex justify-content-md-between">
-      <!-- <div class="col"> -->
-        <div>
+      <div>
+        <a
+          *ngFor="let link of pageLinks"
+          [routerLink]="link.path"
+          class="nav-link"
+          >{{ link.label }}</a
+        >
+      </div>
 
-          <!-- <a
-            routerLink="#"
-            class="nav-link"
-            >plan du site</a
-          > -->
-          <a
-            routerLink="#"
-            class="nav-link"
-            >conditions</a
-          ><a
-            routerLink="#"
-            class="nav-link"
-            >aide</a
-          ><a
-            routerLink="#"
-            class="nav-link"
-            >foire aux questions</a
-          >
-        </div>
-      <!-- </div> -->
-      <!-- <div class="col"> -->
-
-        <div class="d-flex gap-1">
-          <a
-            href="https://github.com/fabagile/"
-            class="mr-2"
-            target="_blank"
-            ><img
-              src="assets/pictures/Octicons-mark-github.svg.png"
-              height="24"
-              width="24"
-            /> </a
-          ><a
-            href="https://twitter.com/FabezioC/"
-            class="mr-2"
-            target="_blank"
-            ><img
-              src="assets/pictures/tweeter-logo-png-clip-art.png"
-              height="24"
-              width="24"
-            /> </a
-          ><a
-            href="https://www.linkedin.com/in/fabrice-riquet-bba4bb19a/"
-            class="mr-2"
-            target="_blank"
-            ><img
-              src="assets/pictures/Comment_créer_et_optimiser_une_Page_Entreprise.png"
-              height="24"
-              width="24"
-            /> </a
-          ><a
-            href="https://www.facebook.com/fabrice.riquet.735/"
-            class="mr-2"
-            target="_blank"
-            ><img
-              src="assets/pictures/Facebook_icon_192.png"
-              height="24"
-              width="24"
-            />
-          </a>
-        </div>
-      <!-- </div> -->
-    </div>
-    <div class="d-flex justify-content-end">
-      <span class="float-right">
-        Développé avec <a href="https://angular.io"><img width="24" src="assets/pictures/skills/angular.png" alt=""></a>
-      </span>
-
+      <div class="d-flex gap-1">
+        <a
+          *ngFor="let link of socialLinks"
+          [title]="link.label"
+          [href]="link.path"
+          class="mr-2"
+          target="_blank"
+          ><img [src]="link.img" height="32" width="32" />
+        </a>
+      </div>
     </div>
   </div>
-  <!-- <h6 class="footertext pb-2"> -->
-    <div class="justify-content-center d-flex">
-      <a
+
+  <div class="justify-content-center d-flex">
+    <a
       class="nav-link me-1"
-        href="https://github.com/fabagile/ng-portfolio"
-        title="voir le code source?"
-        ><strong>fabagile</strong></a
-      >
-      © 2022
-      <!-- <i>- Mise à jour: 10/12/2022 09:27:07</i> -->
-    </div>
-  <!-- </h6> -->
+      href="https://github.com/fabagile/ng-portfolio"
+      title="voir le code source?"
+      ><strong>fabagile</strong></a
+    >
+    © 2022
+  </div>
 </footer>

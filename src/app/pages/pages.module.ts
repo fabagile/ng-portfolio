@@ -8,6 +8,10 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { CguComponent } from './footer/cgu/cgu.component';
+import { HelpComponent } from './footer/help/help.component';
+import { MapComponent } from './footer/map/map.component';
+import { FaqComponent } from './footer/faq/faq.component';
 
 
 const routes = [
@@ -17,10 +21,14 @@ const routes = [
   {path:"portfolio", component:  PortfolioComponent},
   {path:"contact", component:  ContactComponent},
   {path:"about", component:  AboutComponent},
+  {path:"footer/map", component:  MapComponent},
+  {path:"footer/faq", component:  FaqComponent},
+  {path:"footer/help", component:  HelpComponent},
+  {path:"footer/cgu", component:  CguComponent},
 ]
 
 @NgModule({
-  declarations: [LandingPageComponent, SkillsComponent, PortfolioComponent, ServicesComponent, ContactComponent, AboutComponent],
+  declarations: [LandingPageComponent, SkillsComponent, PortfolioComponent, ServicesComponent, ContactComponent, AboutComponent, CguComponent, HelpComponent, MapComponent, FaqComponent],
   imports: [
     CommonModule, RouterModule.forChild(routes)
   ]
