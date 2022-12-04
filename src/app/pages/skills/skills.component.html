@@ -8,33 +8,35 @@
     <li class="list-group-item">maintenance</li>
   </ul>
   <h2 class="pb-5 uppercase">Acquis</h2>
-  <div *ngFor="let skill of skills" class="mx-auto w-75">
+  <div *ngFor="let skill of skills" class="mx-auto">
     <h3 class="mt-4">{{ skill.category }}</h3>
     <div
       *ngFor="let item of skill.items"
-      class="card my-3 &amp;quot;block&amp;quot;"
-      id="code.title"
+      class="skill__card card my-3 "
+
     >
-      <div class="d-flex">
-        <div class="frame svelte-1weymmp">
-          <img
-            width="200"
-            class="block svelte-1weymmp"
-            rounded="rounded"
-            [src]="item.img"
-            alt=""
-          />
-        </div>
-        <div class="flex-col w-full mx-3 pl-2">
-          <h3>{{ item.label }}</h3>
-          <p class="font-light text-left">
-            {{ item.desc }}
-          </p>
-          <p class="text-muted version font-light text-gray-500 text-left">
-            version: {{ item.version }}
-          </p>
-        </div>
-      </div>
+    <!-- <div class="card-img-top"> -->
+      <img
+
+
+        class="card-img-top w-100"
+        rounded="rounded"
+        [src]="item.img"
+        [alt]="item.label"
+      />
+
+    <!-- </div> -->
+    <div class="card-body mx-3 pl-2">
+      <h3 class="card-title fw-normal">{{ item.label }}</h3>
+      <p class="card-text font-light">
+        {{ item.desc }}
+      </p>
+      <p class="card-text text-muted version font-light text-gray-500">
+        version: {{ item.version }}
+      </p>
+    </div>
+      <!-- <div class="row"> -->
+      <!-- </div> -->
     </div>
   </div>
 </div>

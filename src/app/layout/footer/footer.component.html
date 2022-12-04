@@ -6,20 +6,21 @@
           *ngFor="let link of pageLinks"
           [routerLink]="link.path"
           class="nav-link"
-          >{{ link.label }}</a
+          >{{ link.label|titlecase }}</a
         >
       </div>
 
-      <div class="d-flex gap-1">
+      <div class="d-flex rounded gap-1 px-1 bg-light opacity-50 fs-5 align-self-start">
         <a
           *ngFor="let link of socialLinks"
           [title]="link.label"
           [href]="link.path"
-          class="mr-2"
+          class="mr-2 nav-link"
           target="_blank"
-          ><img [src]="link.img" height="32" width="32" />
-        </a>
-      </div>
+          ><app-icon mode="brands" [tag]="link.icon" [color]="link.iconColor"  >
+          <!-- <img [src]="link.img" height="32" width="32" /> -->
+        </app-icon>
+      </a>
     </div>
   </div>
 
@@ -31,5 +32,6 @@
       ><strong>fabagile</strong></a
     >
     © 2022
+  </div>
   </div>
 </footer>

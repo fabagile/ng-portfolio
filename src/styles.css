@@ -12,18 +12,64 @@ app-root {
   --primary: #6667ab !important;
   --secondary: #999854 !important;
 }
+
+#banner {
+  display: none !important;
+}
+.skill__card {
+  display: grid;
+  grid-template-areas:
+  "img"
+  "text"
+  ;
+
+}
+.skill__card .card-img-top {
+  grid-column:100%;
+  grid-area: img;
+}
+.skill__card .card-body {
+  grid-area: text;
+}
+
+@media screen and (min-width: 768px) {
+  #banner {
+    display: block !important;
+  }
+  #banner .d-flex {
+    flex-direction: column;
+  }
+  .skill__card {
+    grid-template-areas: "img text";
+
+    /* grid-template-columns: 200px, auto; */
+  }
+
+  .skill__card .card-img-top {
+    grid: column 50%;
+
+  }
+}
+@media screen and (min-width: 1024px) {
+  #banner .d-flex {
+    flex-direction: row;
+  }
+  .skill__card {
+    grid-template-areas: "img text text";
+    /* grid-template-columns: 1fr, 2fr; */
+  }
+}
+
 .bg-primary,
 .btn-primary {
   background: var(--primary) !important;
 }
 .btn-primary {
   border-color: var(--secondary) !important;
-
 }
 
 .bg-secondary {
-background: var(--secondary) !important;
-
+  background: var(--secondary) !important;
 }
 .border-primary {
   border-color: var(--primary) !important;
@@ -33,16 +79,19 @@ background: var(--secondary) !important;
   text-shadow: 1px 1px 1px var(--secondary) !important;
 }
 
-a, .btn,
-a:hover, .btn:hover {
-  transition:all 200ms linear 50ms;
+a,
+.btn,
+a:hover,
+.btn:hover {
+  transition: all 200ms linear 50ms;
 
-  -webkit-transition:all 200ms linear 50ms;
-  -moz-transition:all 200ms linear 50ms;
-  -ms-transition:all 200ms linear 50ms;
-  -o-transition:all 200ms linear 50ms;
+  -webkit-transition: all 200ms linear 50ms;
+  -moz-transition: all 200ms linear 50ms;
+  -ms-transition: all 200ms linear 50ms;
+  -o-transition: all 200ms linear 50ms;
 }
-a:hover, .btn-primary:hover {
+a:hover,
+.btn-primary:hover {
   background: var(--secondary) !important;
   border-color: var(--primary) !important;
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PAGE_LINKS, SOCIAL_LINKS } from './footer-links';
+// import { PAGE_LINKS, SOCIAL_LINKS } from './footer-links';
+import { FOOTER_LINKS, SOCIAL_LINKS } from 'src/app/routes';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,7 @@ import { PAGE_LINKS, SOCIAL_LINKS } from './footer-links';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  pageLinks = PAGE_LINKS
+  pageLinks = FOOTER_LINKS
   socialLinks = SOCIAL_LINKS
 
   constructor() { }

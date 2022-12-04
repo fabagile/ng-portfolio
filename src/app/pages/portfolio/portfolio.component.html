@@ -1,20 +1,20 @@
 <div class="container-md">
 <div class="text-center mt-5 mb-4">
-  <h1 class="svelte-1q5hf50">Portfolio</h1>
+  <h1 class="">Portfolio</h1>
 </div>
 <div *ngFor="let release of releases">
   <h2 class="text-center mb-3">{{release.category}}:</h2>
   <div class="row">
-    <div *ngFor="let item of release.items" class="col-4 text-center">
-      <div   class="card mx-auto m-3 svelte-1utcuv0">
-        <img
-          class="card-top-img py-1 px-2 rounded-lg svelte-1utcuv0"
-          [src]="item.img"
-          [alt]="item.label"
-        />
-        <div class="card-header p-0 m-0">
-          <div class="frame svelte-1utcuv0">
-          </div>
+    <div *ngFor="let item of release.items" class="col-md-6 col-lg-4 col-xl-3 text-center">
+      <div   class="card mx-auto m-3 ">
+        <div class="frame card-header" >
+          <img
+            class="py-1 px-2 rounded-lg w-100"
+            [src]="item.img"
+            [alt]="item.label"
+          />
+        </div>
+        <div class=" p-0 m-0">
           <div class="card-body">
             <div class="card-text">{{item.label}}</div>
           </div>
@@ -44,14 +44,14 @@
 <!-- <h2 class="text-center mb-3">Sites réalisés:</h2> -->
 <!-- <div class="row">
   <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-    <div class="card mx-auto m-3 svelte-1utcuv0">
+    <div class="card mx-auto m-3 ">
       <img
-        class="card-top-img py-1 px-2 rounded-lg svelte-1utcuv0"
+        class="card-top-img py-1 px-2 rounded-lg "
         src="assets/pictures/portfolio/pklinux.png"
         alt="pklinux"
       />
       <div class="card-header p-0 m-0">
-        <div class="frame svelte-1utcuv0">
+        <div class="frame ">
         </div>
         <div class="card-body">
           <div class="card-text">PKLinux</div>
@@ -78,14 +78,14 @@
 <h2 class="text-center mb-3">Sites créés en formation:</h2>
 <div class="row">
   <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-    <div class="card mx-auto m-3 svelte-1utcuv0">
+    <div class="card mx-auto m-3 ">
       <img
-        class="card-top-img py-1 px-2 rounded-lg svelte-1utcuv0"
+        class="card-top-img py-1 px-2 rounded-lg "
         src="assets/pictures/portfolio/voyage.png"
         alt="travel agency"
       />
       <div class="card-header p-0 m-0">
-        <div class="frame svelte-1utcuv0">
+        <div class="frame ">
         </div>
         <div class="card-body">
           <div class="card-text">Travel Agency</div>
@@ -109,14 +109,14 @@
     </div>
   </div>
   <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-    <div class="card mx-auto m-3 svelte-1utcuv0">
+    <div class="card mx-auto m-3 ">
       <img
-        class="card-top-img py-1 px-2 rounded-lg svelte-1utcuv0"
+        class="card-top-img py-1 px-2 rounded-lg "
         src="assets/pictures/portfolio/serpent.png"
         alt="snakeey"
       />
       <div class="card-header p-0 m-0">
-        <div class="frame svelte-1utcuv0">
+        <div class="frame ">
         </div>
         <div class="card-body">
           <div class="card-text">Snakeey</div>
@@ -140,14 +140,14 @@
     </div>
   </div>
   <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-    <div class="card mx-auto m-3 svelte-1utcuv0">
+    <div class="card mx-auto m-3 ">
       <img
-        class="card-top-img py-1 px-2 rounded-lg svelte-1utcuv0"
+        class="card-top-img py-1 px-2 rounded-lg "
         src="assets/pictures/portfolio/color-image.jpg"
         alt="top 5 actrices"
       />
       <div class="card-header p-0 m-0">
-        <div class="frame svelte-1utcuv0">
+        <div class="frame ">
         </div>
         <div class="card-body">
           <div class="card-text">Top 5 Actrices</div>
@@ -171,14 +171,14 @@
     </div>
   </div>
   <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-    <div class="card mx-auto m-3 svelte-1utcuv0">
+    <div class="card mx-auto m-3 ">
       <img
-        class="card-top-img py-1 px-2 rounded-lg svelte-1utcuv0"
+        class="card-top-img py-1 px-2 rounded-lg "
         src="assets/pictures/portfolio/banner-overlay1.png"
         alt="do-pe"
       />
       <div class="card-header p-0 m-0">
-        <div class="frame svelte-1utcuv0">
+        <div class="frame ">
         </div>
         <div class="card-body"><div class="card-text">Do-Pe</div></div>
       </div>

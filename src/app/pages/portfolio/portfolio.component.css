@@ -1,0 +1,20 @@
+
+
+.frame {
+  /* height: 350px !important; */
+  /* width: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+
+  .frame {
+    height: 240px !important;
+    /* width: auto; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+}

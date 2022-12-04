@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FOOTER_LINKS, MAIN_LINKS } from './map-links';
+import { Router } from '@angular/router';
+import { Link } from 'src/app/link.model';
+import { FOOTER_LINKS, MAIN_LINKS } from 'src/app/routes';
 
 @Component({
   selector: 'app-map',
@@ -8,11 +10,13 @@ import { FOOTER_LINKS, MAIN_LINKS } from './map-links';
 })
 export class MapComponent implements OnInit {
   mainLinks = MAIN_LINKS
-  footerLinks = FOOTER_LINKS
+  footerLinks!: Link[]
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+    this.footerLinks = FOOTER_LINKS.filter(link=> link.label !='plan du site')
+    console.table(this.footerLinks)
   }
 
 }

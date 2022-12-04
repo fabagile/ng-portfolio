@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { routes } from 'src/app/routes';
+import { MAIN_LINKS } from 'src/app/routes';
+// import { routes } from 'src/app/routes';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import { routes } from 'src/app/routes';
 })
 export class NavbarComponent implements OnInit {
   collapse=true
-  links = routes
+  links = MAIN_LINKS
   active=false
   toggleCollapse(){
     this.collapse = !this.collapse

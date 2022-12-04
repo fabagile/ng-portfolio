@@ -12,6 +12,7 @@ import { registerLocaleData } from '@angular/common';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
+import { IconComponent } from './interface/icon/icon.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
+    IconComponent,
 
   ],
   imports: [
