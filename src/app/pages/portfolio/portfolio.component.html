@@ -5,11 +5,11 @@
 <div *ngFor="let release of releases">
   <h2 class="text-center mb-3">{{release.category}}:</h2>
   <div class="row">
-    <div *ngFor="let item of release.items" class="col-md-6 col-lg-4 col-xl-3 text-center">
+    <div *ngFor="let item of release.items" class="col-md-6 col-lg-4  text-center">
       <div   class="card mx-auto m-3 ">
-        <div class="frame card-header" >
+        <div class="frame  " >
           <img
-            class="py-1 px-2 rounded-lg w-100"
+            class="rounded-lg w-100"
             [src]="item.img"
             [alt]="item.label"
           />

@@ -16,6 +16,12 @@ app-root {
 #banner {
   display: none !important;
 }
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+}
 .skill__card {
   display: grid;
   grid-template-areas:
@@ -30,6 +36,14 @@ app-root {
 }
 .skill__card .card-body {
   grid-area: text;
+}
+
+a {
+  letter-spacing: 1px;
+}
+a.btn {
+  letter-spacing: 0;
+
 }
 
 @media screen and (min-width: 768px) {
