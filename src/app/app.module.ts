@@ -14,32 +14,23 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { IconComponent } from './interface/icon/icon.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent,
-    // LoaderComponent,
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
     IconComponent,
-    // RequiredFieldComponent,
-
   ],
-  imports: [
-    BrowserModule,
-    PagesModule,
-    AppRoutingModule,
-
-  ],
+  imports: [BrowserModule, PagesModule, AppRoutingModule],
   providers: [
     {
       provide: LOCALE_ID,
       useValue: 'fr_FR',
     },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor() {

@@ -15,6 +15,7 @@ import { FaqComponent } from './footer/faq/faq.component';
 import { RequiredFieldComponent } from '../interface/form/required-field/required-field.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoaderComponent } from '../interface/loader/loader.component';
+import { LabelComponent } from '../interface/form/label/label.component';
 
 const routes = [
   { path: '', component: LandingPageComponent },
@@ -42,7 +43,8 @@ const routes = [
     MapComponent,
     FaqComponent,
     RequiredFieldComponent,
-    LoaderComponent
+    LoaderComponent,
+    LabelComponent
   ],
   imports: [CommonModule, RouterModule.forChild(routes), FormsModule, ReactiveFormsModule],
 })

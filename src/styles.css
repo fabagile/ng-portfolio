@@ -153,3 +153,43 @@ a {
 .nav-tag {
   display: none;
 }
+.bg-linkedin {
+  background: #0B66C2;
+}
+.bg-twitter {
+  background: #1E9AEE;
+}
+.bg-facebook {
+  background: #1675F1;
+}
+.bg-youtube {
+  background: #FC0001;
+}
+.bg-github {
+  background: #222222;
+}
+.text-linkedin {
+  color: #0B66C2;
+}
+.text-twitter {
+  color: #1E9AEE;
+}
+.text-facebook {
+  color: #1675F1;
+}
+.text-youtube {
+  color: #FC0001;
+}
+.text-github {
+  color: #222222;
+}
+
+.bg-gray-100 {background: #f8f9fa;}
+.bg-gray-200 {background: #e9ecef;}
+.bg-gray-300 {background: #dee2e6;}
+.bg-gray-400 {background: #ced4da;}
+.bg-gray-500 {background: #adb5bd;}
+.bg-gray-600 {background: #6c757d;}
+.bg-gray-700 {background: #495057;}
+.bg-gray-800 {background: #343a40;}
+.bg-gray-900 {background: #212529;}
