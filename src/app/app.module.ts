@@ -4,7 +4,7 @@ import * as fr from '@angular/common/locales/fr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LoaderComponent } from './loader/loader.component';
 import { PagesModule } from './pages/pages.module';
@@ -13,9 +13,6 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { IconComponent } from './interface/icon/icon.component';
-import { RequiredFieldComponent } from './interface/form/required-field/required-field.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { LayoutModule } from './layout/layout.module';
 
 
 @NgModule({
@@ -33,10 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     PagesModule,
-    // FormsModule, ReactiveFormsModule,
     AppRoutingModule,
-    // NgbModule,
-    // LayoutModule,
+
   ],
   providers: [
     {

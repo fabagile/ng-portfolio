@@ -1,4 +1,3 @@
-import { Component } from '@angular/core';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CguComponent } from './pages/footer/cgu/cgu.component';
@@ -8,7 +7,6 @@ import { MapComponent } from './pages/footer/map/map.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ServicesComponent } from './pages/services/services.component';
-import { SkillsComponent } from './pages/skills/skills.component';
 
 export const routes = [
   { path: '', title: 'accueil', icon: 'house' },

@@ -13,8 +13,6 @@ import { User } from '../../database/models/user.model';
 })
 export class ContactComponent implements OnInit {
   userForm!: FormGroup;
-  // users!: User[];
-  // user!: User;
   userPreview$!: Observable<User>;
   checked!:boolean
 
@@ -55,13 +53,12 @@ export class ContactComponent implements OnInit {
         creationDate: new Date(),
         rootUser: false,
       }))
-      // tap(data => console.log(data))
     );
   }
 
   onSubmitForm() {
     this.usersService.addUser(this.userForm.value);
-    // console.log(this.userForm.value);
+    console.table(this.userForm.value);
 
     this.router.navigateByUrl('')
   }
