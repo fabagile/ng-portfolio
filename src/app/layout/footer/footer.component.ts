@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FOOTER_LINKS, SOCIAL_LINKS } from 'src/app/routes';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'layout-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })

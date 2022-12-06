@@ -4,7 +4,7 @@ import { Link } from 'src/app/link.model';
 import { FOOTER_LINKS, MAIN_LINKS } from 'src/app/routes';
 
 @Component({
-  selector: 'app-map',
+  selector: 'page-footer-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })

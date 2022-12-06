@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ErrorPageComponent } from './error-page/error-page.component';
-import { LoaderComponent } from './loader/loader.component';
+
 import { PagesModule } from './pages/pages.module';
 import { registerLocaleData } from '@angular/common';
 import { HeaderComponent } from './layout/header/header.component';
@@ -19,7 +19,7 @@ import { IconComponent } from './interface/icon/icon.component';
   declarations: [
     AppComponent,
     ErrorPageComponent,
-    LoaderComponent,
+    // LoaderComponent,
     HeaderComponent,
     FooterComponent,
     NavbarComponent,

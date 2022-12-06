@@ -7,7 +7,7 @@ import { UsersService } from 'src/app/services/users.service';
 import { User } from '../../database/models/user.model';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'page-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })

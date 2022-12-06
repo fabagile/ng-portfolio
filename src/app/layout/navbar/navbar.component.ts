@@ -3,7 +3,7 @@ import { MAIN_LINKS } from 'src/app/routes';
 // import { routes } from 'src/app/routes';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'layout-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })

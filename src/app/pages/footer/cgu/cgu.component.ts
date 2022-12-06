@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-cgu',
+  selector: 'page-footer-cgu',
   templateUrl: './cgu.component.html',
   styleUrls: ['./cgu.component.css']
 })
