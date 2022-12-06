@@ -13,6 +13,9 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { IconComponent } from './interface/icon/icon.component';
+import { RequiredFieldComponent } from './interface/form/required-field/required-field.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { LayoutModule } from './layout/layout.module';
 
 
 @NgModule({
@@ -24,13 +27,16 @@ import { IconComponent } from './interface/icon/icon.component';
     FooterComponent,
     NavbarComponent,
     IconComponent,
+    // RequiredFieldComponent,
 
   ],
   imports: [
     BrowserModule,
     PagesModule,
+    // FormsModule, ReactiveFormsModule,
     AppRoutingModule,
-    NgbModule
+    // NgbModule,
+    // LayoutModule,
   ],
   providers: [
     {

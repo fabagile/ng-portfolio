@@ -16,11 +16,18 @@ app-root {
 #banner {
   display: none !important;
 }
+section {
+  margin: 2em 0;
+}
+article {
+  margin-bottom: 1em 0 1.5em 0;
+}
 
 h1 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1pt;
+  margin-bottom: 0.5em;
 }
 .skill__card {
   display: grid;
@@ -72,6 +79,10 @@ a.btn {
     grid-template-areas: "img text text";
     /* grid-template-columns: 1fr, 2fr; */
   }
+}
+
+.text-primary {
+  color: var(--primary) !important;
 }
 
 .bg-primary,

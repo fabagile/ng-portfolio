@@ -1,125 +1,129 @@
-<div class="container-md">
-  <div class="mx-auto text-center">
-    <div class="text-center mt-5 mb-4">
-      <h1 class="svelte-1q5hf50">Formulaire de contact</h1>
-    </div>
-    <form
-      class="w-50 d-block mx-auto text-center"
-      data-dashlane-rid="a20ffa036dc5b86b"
-      data-form-type="contact"
-    >
-      <fieldset>
-        <div class="row">
-          <div class="col">
-            <legend>persona</legend>
-            <div class="my-4 mx-auto items-center">
-              <input
-                type="text"
-                class="py-1 px-3 border border-dark rounded"
-                placeholder="nom: "
-                data-dashlane-rid="5d25db26fd13b0a8"
-                data-form-type="other"
-              />
-            </div>
-            <div class="my-4 mx-auto items-center">
-              <input
-                type="text"
-                class="py-1 px-3 border border-dark rounded"
-                placeholder="prénom: "
-                data-dashlane-rid="1143ab437c542d27"
-                data-form-type="other"
-              />
-            </div>
-            <div class="my-4 mx-auto items-center">
-              <input
-                type="email"
-                class="py-1 px-3 border border-dark rounded"
-                placeholder="entrez votre email"
-                data-dashlane-rid="fd2d35c94ae7f43f"
-                data-kwimpalastatus="alive"
-                data-kwimpalaid="1665559627045-0"
-                data-form-type="email"
-              /><span id="1665559627045-0" data-dashlanecreated="true"></span>
-            </div>
+<section class="container-md">
+  <h1 class="">Formulaire de contact</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <small class="float-end">* Champ obligatoire</small>
+      <form [formGroup]="userForm" >
+        <fieldset>
+          <legend>Identité</legend>
+          <div class="form-group mb-2">
+            <label for="username"  class="form-label">
+              Identifiant<app-required-field></app-required-field>
+            </label>
+            <input id="username" formControlName="username" class="form-control" type="text" />
           </div>
-          <div class="col">
-            <legend>entreprise</legend>
-            <div class="my-4 mx-auto items-center">
-              <input
-                type="text"
-                class="py-1 px-3 border border-dark rounded"
-                placeholder="raison sociale"
-                data-dashlane-rid="5a7f3145f31e480f"
-                data-kwimpalastatus="alive"
-                data-kwimpalaid="1665559627045-1"
-                data-form-type="company,company_name"
-              /><span id="1665559627045-1" data-dashlanecreated="true"></span>
-            </div>
-            <div class="my-4 mx-auto items-center">
-              <input
-                type="text"
-                class="py-1 px-3 border border-dark rounded"
-                placeholder="adresse url de l&#39;entreprise"
-                data-dashlane-rid="777589ecf064447b"
-                data-form-type="other"
-              />
-            </div>
+          <div class="form-group mb-2">
+            <label for="firstname" class="form-label">prénom<app-required-field></app-required-field></label>
+            <input id="firstname" formControlName="firstname" class="form-control" type="text" />
           </div>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Message</legend>
-        <textarea
-          class="rounded-lg py-1 px-3"
-          name="message"
-          rows="2"
-          cols="40"
-          placeholder="entrez votre message ici"
-          required=""
-          data-dashlane-rid="199112889a78f09b"
-          data-form-type="other"
-        ></textarea>
-        <legend>Confirmation</legend>
-        <div class="flex center-items my-3">
-          <label
-            class="text-justify"
-            v-model="checkbox"
-            data-dashlane-label="true"
-            ><input
-              class="mr-2"
-              id="checkbox"
-              type="checkbox"
-              data-dashlane-rid="e8ef43af6332b7fe"
+          <div class="form-group mb-2">
+            <label for="lastname" class="form-label">nom<app-required-field></app-required-field></label>
+            <input id="lastname" formControlName="lastname" class="form-control" type="text" />
+          </div>
+
+        </fieldset>
+        <fieldset>
+          <legend>Moyens de contact</legend>
+          <div class="form-group mb-2">
+            <label for="email" class="form-label">
+              Adresse Courriel<app-required-field></app-required-field>
+            </label>
+            <input id="email" formControlName="email" class="form-control" type="email" />
+          </div>
+          <div class="form-group mb-2">
+            <label for="phone" class="form-label">
+              Numéro de téléphone<app-required-field></app-required-field>
+            </label>
+            <input id="phone" formControlName="phone" class="form-control" type="tel" />
+          </div>
+          <div class="form-group mb-2">
+            <label for="password" class="form-label">
+              Mot de passe<app-required-field></app-required-field>
+            </label>
+            <input id="password" formControlName="password" class="form-control" type="text" />
+          </div>
+          <div class="form-group mb-2">
+            <label for="password2" class="form-label">
+              Confirmer mot de passe<app-required-field></app-required-field>
+            </label>
+            <input id="password2" formControlName="password" class="form-control" type="text" />
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="address" class="form-label">
+              N° et voie<app-required-field></app-required-field>
+            </label>
+            <input id="address" formControlName="address" class="form-control" type="address" />
+          </div>
+          <div class="form-group mb-2">
+            <label for="addressMoreInfo" class="form-label">
+              Précision (Bâtiment, appartement, etc)
+            </label>
+            <input id="addressMoreInfo" formControlName="addressMoreInfo" class="form-control" type="text" />
+          </div>
+          <div class="form-group mb-2">
+            <label for=""postalCode class="form-label">
+              Code Postal<app-required-field></app-required-field>
+            </label>
+            <input id="postalCode" formControlName="postalCode" class="form-control" type="text" />
+          </div>
+          <div class="form-group mb-2">
+            <label for="city" class="form-label">
+              Ville<app-required-field></app-required-field>
+            </label>
+            <input id="city" formControlName="city" class="form-control" type="text" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Opérations</legend>
+          <div class="form-group mb-2">
+            <input type="checkbox" name="check" id="check">
+            <label class="ms-2" for="check">Je certifie l'exactitude des données transmises ci-dessus</label>
+          </div>
+          <div class="d-flex btn-group">
+            <button
+            (click)="onSubmitForm()"
+              class="btn btn-primary uppercase on:click=()=&gt;a(&quot;sendmail&quot;) font-bold"
+              type="submit"
+              data-dashlane-rid="744a4edb47ba1d0e"
+              data-dashlane-label="true"
+              data-form-type="action"
+            >
+              Enregistrer
+            </button>
+            <button
+            type="reset"
+              class="btn btn-secondary"
+              data-dashlane-rid="568878b83c837149"
+              data-dashlane-label="true"
               data-form-type="other"
-            />
-            Je certifie la conformité des données ci-jointes</label
-          >
-        </div>
-        <legend>Opérations</legend>
-        <div class="btn-group">
-          <button
-            class="btn btn-outline-success uppercase on:click=()=&gt;a(&quot;sendmail&quot;) font-bold"
-            type="submit"
-            data-dashlane-rid="744a4edb47ba1d0e"
-            data-dashlane-label="true"
-            data-form-type="action"
-          >
-            envoyer
-          </button>
-          <button
-            class="btn btn-warning"
-            data-dashlane-rid="568878b83c837149"
-            data-dashlane-label="true"
-            data-form-type="other"
-          >
-            recommencer
-          </button>
-          <a routerLink="/contact" class="btn btn-danger"
-            >annuler</a
-          >
-        </div>
-      </fieldset>
-    </form>
-    <hr />
+            >
+              recommencer
+            </button>
+            <!-- <a routerLink="/contact" class="btn btn-danger">annuler</a> -->
+          </div>
+        </fieldset>
+      </form>
+
+    </div>
+    <!-- <hr /> -->
+    <div *ngIf="userPreview$ | async as user" class="card col-md-12">
+      <div class="card-header">
+        <h3 class="card-title">{{user.username}}</h3>
+        <h4  class="card-subtitle">{{user.firstname}} {{user.lastname}}</h4>
+
+      </div>
+      <div class="card-body">
+        <div class="card-text">{{user.email}}</div>
+        <div class="card-text">{{user.phone}}</div>
+        <div class="card-text">{{user.address}}</div>
+        <div class="card-text">{{user.addressMoreInfo}}</div>
+        <div class="card-text">{{user.postalCode}}</div>
+        <div class="card-text">{{user.city}}</div>
+        <div class="card-text">{{user.password}}</div>
+        <!-- <div class="card-text">{{user}}</div>
+        <div class="card-text">{{user}}</div> -->
+      </div>
+    </div>
   </div>
-</div>
+</section>
