@@ -3,24 +3,42 @@
   <div class="row">
     <div class="col-md-12">
       <small class="float-end">* Champ obligatoire</small>
-      <form [formGroup]="userForm" >
+      <form [formGroup]="userForm">
         <fieldset>
           <legend>Identité</legend>
           <div class="form-group mb-2">
-            <label for="username"  class="form-label">
+            <label for="username" class="form-label">
               Identifiant<app-required-field></app-required-field>
             </label>
-            <input id="username" formControlName="username" class="form-control" type="text" />
+            <input
+              id="username"
+              formControlName="username"
+              class="form-control"
+              type="text"
+            />
           </div>
           <div class="form-group mb-2">
-            <label for="firstname" class="form-label">prénom<app-required-field></app-required-field></label>
-            <input id="firstname" formControlName="firstname" class="form-control" type="text" />
+            <label for="firstname" class="form-label"
+              >prénom<app-required-field></app-required-field
+            ></label>
+            <input
+              id="firstname"
+              formControlName="firstname"
+              class="form-control"
+              type="text"
+            />
           </div>
           <div class="form-group mb-2">
-            <label for="lastname" class="form-label">nom<app-required-field></app-required-field></label>
-            <input id="lastname" formControlName="lastname" class="form-control" type="text" />
+            <label for="lastname" class="form-label"
+              >nom<app-required-field></app-required-field
+            ></label>
+            <input
+              id="lastname"
+              formControlName="lastname"
+              class="form-control"
+              type="text"
+            />
           </div>
-
         </fieldset>
         <fieldset>
           <legend>Moyens de contact</legend>
@@ -28,99 +46,131 @@
             <label for="email" class="form-label">
               Adresse Courriel<app-required-field></app-required-field>
             </label>
-            <input id="email" formControlName="email" class="form-control" type="email" />
+            <input
+              id="email"
+              formControlName="email"
+              class="form-control"
+              type="email"
+            />
           </div>
           <div class="form-group mb-2">
             <label for="phone" class="form-label">
               Numéro de téléphone<app-required-field></app-required-field>
             </label>
-            <input id="phone" formControlName="phone" class="form-control" type="tel" />
+            <input
+              id="phone"
+              formControlName="phone"
+              class="form-control"
+              type="tel"
+            />
           </div>
           <div class="form-group mb-2">
             <label for="password" class="form-label">
               Mot de passe<app-required-field></app-required-field>
             </label>
-            <input id="password" formControlName="password" class="form-control" type="text" />
+            <input
+              id="password"
+              formControlName="password"
+              class="form-control"
+              type="text"
+            />
           </div>
           <div class="form-group mb-2">
             <label for="password2" class="form-label">
               Confirmer mot de passe<app-required-field></app-required-field>
             </label>
-            <input id="password2" formControlName="password" class="form-control" type="text" />
+            <input
+              id="password2"
+              formControlName="password"
+              class="form-control"
+              type="text"
+            />
           </div>
 
           <div class="form-group mb-2">
             <label for="address" class="form-label">
               N° et voie<app-required-field></app-required-field>
             </label>
-            <input id="address" formControlName="address" class="form-control" type="address" />
+            <input
+              id="address"
+              formControlName="address"
+              class="form-control"
+              type="address"
+            />
           </div>
           <div class="form-group mb-2">
             <label for="addressMoreInfo" class="form-label">
               Précision (Bâtiment, appartement, etc)
             </label>
-            <input id="addressMoreInfo" formControlName="addressMoreInfo" class="form-control" type="text" />
+            <input
+              id="addressMoreInfo"
+              formControlName="addressMoreInfo"
+              class="form-control"
+              type="text"
+            />
           </div>
           <div class="form-group mb-2">
-            <label for=""postalCode class="form-label">
+            <label for="" postalCode class="form-label">
               Code Postal<app-required-field></app-required-field>
             </label>
-            <input id="postalCode" formControlName="postalCode" class="form-control" type="text" />
+            <input
+              id="postalCode"
+              formControlName="postalCode"
+              class="form-control"
+              type="text"
+            />
           </div>
           <div class="form-group mb-2">
             <label for="city" class="form-label">
               Ville<app-required-field></app-required-field>
             </label>
-            <input id="city" formControlName="city" class="form-control" type="text" />
+            <input
+              id="city"
+              formControlName="city"
+              class="form-control"
+              type="text"
+            />
           </div>
         </fieldset>
         <fieldset>
           <legend>Opérations</legend>
-          <div class="form-group mb-2">
-            <input type="checkbox" name="check" id="check">
-            <label class="ms-2" for="check">Je certifie l'exactitude des données transmises ci-dessus</label>
+          <div class=" mb-2">
+            <input [disabled]="userForm.invalid" (click)="checked=true" type="checkbox" name="check" id="check" />
+            <label  class="ms-2" for="check"
+              >Je certifie l'exactitude des données transmises ci-dessus</label
+            >
           </div>
           <div class="d-flex btn-group">
             <button
-            (click)="onSubmitForm()"
-              class="btn btn-primary uppercase on:click=()=&gt;a(&quot;sendmail&quot;) font-bold"
+            [disabled]="!checked"
+              (click)="onSubmitForm()"
+              class="btn btn-primary text-uppercase"
               type="submit"
-              data-dashlane-rid="744a4edb47ba1d0e"
-              data-dashlane-label="true"
-              data-form-type="action"
             >
               Enregistrer
             </button>
-            <button
-            type="reset"
-              class="btn btn-secondary"
-              data-dashlane-rid="568878b83c837149"
-              data-dashlane-label="true"
-              data-form-type="other"
-            >
+            <button type="reset" class="btn btn-secondary text-uppercase">
               recommencer
             </button>
             <!-- <a routerLink="/contact" class="btn btn-danger">annuler</a> -->
           </div>
         </fieldset>
       </form>
-
     </div>
     <!-- <hr /> -->
     <div *ngIf="userPreview$ | async as user" class="card col-md-12">
       <div class="card-header">
-        <h3 class="card-title">{{user.username}}</h3>
-        <h4  class="card-subtitle">{{user.firstname}} {{user.lastname}}</h4>
-
+        <h3 class="card-title">{{ user.username }}</h3>
+        <h4 class="card-subtitle">{{ user.firstname }} {{ user.lastname }}</h4>
       </div>
       <div class="card-body">
-        <div class="card-text">{{user.email}}</div>
-        <div class="card-text">{{user.phone}}</div>
-        <div class="card-text">{{user.address}}</div>
-        <div class="card-text">{{user.addressMoreInfo}}</div>
-        <div class="card-text">{{user.postalCode}}</div>
-        <div class="card-text">{{user.city}}</div>
-        <div class="card-text">{{user.password}}</div>
+        <div class="card-text">{{ user.email }}</div>
+        <div class="card-text">{{ user.phone }}</div>
+        <div class="card-text">{{ user.address }}</div>
+        <div class="card-text">{{ user.addressMoreInfo }}</div>
+        <div class="card-text">{{ user.postalCode }}</div>
+        <div class="card-text">{{ user.city }}</div>
+        <div class="card-text">{{ user.password }}</div>
         <!-- <div class="card-text">{{user}}</div>
         <div class="card-text">{{user}}</div> -->
       </div>
