@@ -16,6 +16,7 @@ export class ContactComponent implements OnInit {
   // users!: User[];
   // user!: User;
   userPreview$!: Observable<User>;
+  checked!:boolean
 
   // urlRegex?: RegExp;
   // emailRegex!: RegExp;
@@ -27,6 +28,7 @@ export class ContactComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.checked=false
     // this.urlRegex =
     //   /?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&/=]*)/;
     // this.emailRegex =
@@ -56,9 +58,11 @@ export class ContactComponent implements OnInit {
       // tap(data => console.log(data))
     );
   }
+
   onSubmitForm() {
     this.usersService.addUser(this.userForm.value);
     // console.log(this.userForm.value);
+
     this.router.navigateByUrl('')
   }
 }
