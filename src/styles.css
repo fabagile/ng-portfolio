@@ -193,3 +193,19 @@ a {
 .bg-gray-700 {background: #495057;}
 .bg-gray-800 {background: #343a40;}
 .bg-gray-900 {background: #212529;}
+
+
+fieldset {
+  border: medium solid var(--secondary);
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}
+.form-group {
+  margin: 0 1em !important;
+}

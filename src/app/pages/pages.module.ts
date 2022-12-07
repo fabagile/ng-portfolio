@@ -16,6 +16,8 @@ import { RequiredFieldComponent } from '../interface/form/required-field/require
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoaderComponent } from '../interface/loader/loader.component';
 import { LabelComponent } from '../interface/form/label/label.component';
+import { SignUpComponent } from './subscriber-page/sign-up/sign-up.component';
+import { LogInComponent } from './subscriber-page/log-in/log-in.component';
 
 const routes = [
   { path: '', component: LandingPageComponent },
@@ -28,6 +30,8 @@ const routes = [
   { path: 'footer/faq', component: FaqComponent },
   { path: 'footer/help', component: HelpComponent },
   { path: 'footer/cgu', component: CguComponent },
+  { path: 'subscribers/sign-up', component: SignUpComponent },
+  { path: 'subscribers/log-in', component: LogInComponent },
 ];
 
 @NgModule({
@@ -44,7 +48,9 @@ const routes = [
     FaqComponent,
     RequiredFieldComponent,
     LoaderComponent,
-    LabelComponent
+    LabelComponent,
+    SignUpComponent,
+    LogInComponent
   ],
   imports: [CommonModule, RouterModule.forChild(routes), FormsModule, ReactiveFormsModule],
 })

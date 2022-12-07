@@ -1,6 +1,4 @@
-<nav
-  class="navbar navbar-expand-lg navbar-dark accent shadow sticky-top "
->
+<nav class="navbar navbar-expand-lg navbar-dark accent shadow sticky-top">
   <a
     routerLink="/"
     routerLinkActive="router-link-active"
@@ -13,8 +11,6 @@
       class="mx-1"
     />
     fabagile
-
-
   </a>
   <button
     aria-controls="navbarSupportedContent"
@@ -27,11 +23,16 @@
   >
     <span (click)="toggleCollapse()" class="navbar-toggler-icon"></span>
   </button>
-  <div class="text-center navbar-collapse collapse" [ngClass]="{show: collapse==false}" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto ">
-      <li (click)="collapse=true"
+  <div
+    class="text-center navbar-collapse collapse"
+    [ngClass]="{ show: collapse == false }"
+    id="navbarSupportedContent"
+  >
+    <ul class="navbar-nav mr-auto">
+      <li
+        (click)="collapse = true"
         *ngFor="let link of links"
-        class="nav-item text-uppercase font-weight-light "
+        class="nav-item text-uppercase font-weight-light"
       >
         <a
           routerLinkActive="active"
@@ -47,12 +48,25 @@
           </span>
         </a>
       </li>
-
     </ul>
     <!-- <div>
       <div class="collapse show" id="clock">
         <div class="text-light">9:28</div>
       </div>
     </div> -->
+  </div>
+  <div class="float-end me-2 d-flex border-1 border-dark border-opacity-25 btn-group-vertical text-light">
+    <div
+      class="px-2 nav-link btn btn-lg bg-secondary "
+      routerLink="/subscribers/sign-up"
+    >
+      Inscription
+    </div>
+    <div
+      class="px-2 py-1 nav-link btn btn-lg btn-success "
+      routerLink="/subscribers/log-in"
+    >
+      Connexion
+    </div>
   </div>
 </nav>

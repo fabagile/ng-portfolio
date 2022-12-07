@@ -1,0 +1,72 @@
+<section class="container-md">
+  <h1 class="">Formulaire d'Inscription</h1>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+      <small class="float-end text-primary position-relative pb-1 pe-2 fst-italic fw-semibold">* Champ requis</small>
+      <form [formGroup]="userForm">
+        <fieldset *ngFor="let field of fields">
+          <legend>{{ field.name }}</legend>
+          <div *ngFor="let item of field.items" class="mb-2">
+            <!-- <label [for]="item.input" class="form-label">
+              {{item.label}}<form-required-field *ngIf="item.required==true"></form-required-field>
+            </label> -->
+            <input
+              [id]="item.input"
+              [formControlName]="item.input"
+              [placeholder]="item.label"
+              class="form-control"
+              [type]="item.type"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Opérations</legend>
+          <div class="mb-2">
+            <input
+              [disabled]="userForm.invalid"
+              (click)="checked = true"
+              type="checkbox"
+              name="check"
+              id="check"
+            />
+            <label class="ms-2" for="check"
+              >Je certifie l'exactitude des données transmises ci-dessus</label
+            >
+          </div>
+          <div class="d-md-flex btn-group-vertical gap-0">
+            <button
+              [disabled]="!checked"
+              (click)="onSubmitForm()"
+              class="btn btn-primary text-uppercase"
+              type="submit"
+            >
+              Enregistrer
+            </button>
+            <button type="reset" class="btn btn-secondary text-uppercase">
+              Recommencer
+            </button>
+            <!-- <a routerLink="/contact" class="btn btn-danger">annuler</a> -->
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- <div *ngIf="userPreview$ | async as user" class="card col-md-12">
+      <div class="card-header">
+        <h3 class="card-title">{{ user.username }}</h3>
+        <h4 class="card-subtitle">{{ user.firstname }} {{ user.lastname }}</h4>
+      </div>
+      <div class="card-body">
+        <div class="card-text">{{ user.email }}</div>
+        <div class="card-text">{{ user.phone }}</div>
+        <div class="card-text">{{ user.address }}</div>
+        <div class="card-text">{{ user.addressMoreInfo }}</div>
+        <div class="card-text">{{ user.postalCode }}</div>
+        <div class="card-text">{{ user.city }}</div>
+        <div class="card-text">{{ user.password }}</div>
+
+      </div>
+    </div> -->
+  </div>
+</section>
