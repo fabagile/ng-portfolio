@@ -1,16 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-dark accent shadow sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary accent shadow px-2 sticky-top">
   <a
     routerLink="/"
     routerLinkActive="router-link-active"
-    class="navbar-brand display-4 text-uppercase"
+    class="navbar-brand text-uppercase text-light fw-semibold"
   >
     <img
-      src="assets/pictures/logo/eagle logo - purple bg copie.png"
-      height="32"
+      src="assets/pictures/logo/eagle logo flip.png"
+      height="28"
       alt="logo"
-      class="mx-1"
+      class="me-1"
     />
-    fabagile
+    <span class="" >
+      fabagile-portfolio
+
+    </span>
   </a>
   <button
     aria-controls="navbarSupportedContent"
@@ -38,7 +41,7 @@
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
           [routerLink]="link.path"
-          class="nav-link"
+          class="nav-link text-light"
         >
           <span class="badge p-1 rounded-circle">
             <i class="icon fs-6 fa-fw fa-solid fa-{{ link.icon }}"></i>
@@ -55,15 +58,15 @@
       </div>
     </div> -->
   </div>
-  <div class="float-end me-2 d-flex border-1 border-dark border-opacity-25 btn-group-vertical text-light">
-    <div
+  <div class="float-end d-flex border-1 border-dark border-opacity-25 btn-group-vertical text-light">
+    <!-- <div
       class="px-2 nav-link btn btn-lg bg-secondary "
       routerLink="/subscribers/sign-up"
     >
       Inscription
-    </div>
+    </div> -->
     <div
-      class="px-2 py-1 nav-link btn btn-lg btn-success "
+      class="px-2 py-1 nav-link btn btn-lg border-1 border-secondary btn-success text-uppercase fw-semibold"
       routerLink="/subscribers/log-in"
     >
       Connexion

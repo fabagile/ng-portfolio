@@ -5,7 +5,7 @@ import { MAIN_LINKS } from 'src/app/routes';
 @Component({
   selector: 'layout-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
   collapse=true

@@ -6,7 +6,7 @@ import { FOOTER_LINKS, MAIN_LINKS } from 'src/app/routes';
 @Component({
   selector: 'page-footer-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css']
+  styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
   mainLinks = MAIN_LINKS
