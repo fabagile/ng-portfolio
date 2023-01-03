@@ -1,5 +1,5 @@
 import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
+import { ContactComponent } from './pages/footer/contact/contact.component';
 import { CguComponent } from './pages/footer/cgu/cgu.component';
 import { FaqComponent } from './pages/footer/faq/faq.component';
 import { HelpComponent } from './pages/footer/help/help.component';
@@ -8,22 +8,22 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ServicesComponent } from './pages/services/services.component';
 
-export const routes = [
-  { path: '', title: 'accueil', icon: 'house' },
-  { path: 'services', title: 'services', icon: 'user-tie' },
-  { path: 'skills', title: 'compétences', icon: 'graduation-cap' },
-  { path: 'portfolio', title: 'portfolio', icon: 'tasks' },
-  { path: 'contact', title: 'contactez-moi', icon: 'envelope' },
-  { path: 'about', title: 'à propos', icon: 'info' },
-];
-export const NAVBAR_LINKS = [
-  { path: '', title: 'accueil', icon: 'house' },
-  { path: 'services', title: 'services', icon: 'user-tie' },
-  { path: 'skills', title: 'compétences', icon: 'graduation-cap' },
-  { path: 'portfolio', title: 'portfolio', icon: 'tasks' },
-  { path: 'contact', title: 'contactez-moi', icon: 'envelope' },
-  { path: 'about', title: 'à propos', icon: 'info' },
-];
+// export const routes = [
+//   { path: '', title: 'accueil', icon: 'house' },
+//   { path: 'services', title: 'services', icon: 'user-tie' },
+//   { path: 'skills', title: 'compétences', icon: 'graduation-cap' },
+//   { path: 'portfolio', title: 'portfolio', icon: 'tasks' },
+//   { path: 'contact', title: 'contactez-moi', icon: 'envelope' },
+//   { path: 'about', title: 'à propos', icon: 'info' },
+// ];
+// export const NAVBAR_LINKS = [
+//   { path: '', title: 'accueil', icon: 'house' },
+//   { path: 'services', title: 'services', icon: 'user-tie' },
+//   { path: 'skills', title: 'compétences', icon: 'graduation-cap' },
+//   { path: 'portfolio', title: 'portfolio', icon: 'tasks' },
+//   { path: 'contact', title: 'contactez-moi', icon: 'envelope' },
+//   { path: 'about', title: 'à propos', icon: 'info' },
+// ];
 export const MAIN_LINKS = [
   {
     path: '',
@@ -48,11 +48,11 @@ export const MAIN_LINKS = [
     icon: 'tasks',
   },
   {
-    path: '/contact',
-    label: 'contactez-moi',
-    component: ContactComponent,
-    desc: "contacter l'auteur",
-    icon: 'envelope',
+    path: '/about',
+    label: 'à propos',
+    component: AboutComponent,
+    desc: 'qui suis-je?',
+    icon: 'person-circle-question',
   },
 ];
 export const FOOTER_LINKS = [
@@ -64,11 +64,11 @@ export const FOOTER_LINKS = [
     icon: 'sitemap',
   },
   {
-    path: '/about',
-    label: 'à propos',
-    component: AboutComponent,
-    desc: 'qui suis-je?',
-    icon: 'person-circle-question',
+    path: '/footer/contact',
+    label: 'contactez-moi',
+    component: ContactComponent,
+    desc: "contacter l'auteur",
+    icon: 'envelope',
   },
   {
     path: '/footer/cgu',
@@ -92,12 +92,12 @@ export const FOOTER_LINKS = [
     icon: 'question',
   },
 ];
-export const PAGE_LINKS = [
-  { path: 'footer/map', label: 'plan du site', img: '', icon: '' },
-  { path: 'footer/cgu', label: 'conditions', img: '', icon: '' },
-  { path: 'footer/help', label: 'aide', img: '', icon: '' },
-  { path: 'footer/faq', label: 'foire aux questions', img: '', icon: '' },
-];
+// export const PAGE_LINKS = [
+//   { path: 'footer/map', label: 'plan du site', img: '', icon: '' },
+//   { path: 'footer/cgu', label: 'conditions', img: '', icon: '' },
+//   { path: 'footer/help', label: 'aide', img: '', icon: '' },
+//   { path: 'footer/faq', label: 'foire aux questions', img: '', icon: '' },
+// ];
 
 export const SOCIAL_LINKS = [
   {

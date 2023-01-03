@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { UsersService } from 'src/app/services/users.service';
-import { User } from '../../database/models/user.model';
+import { User } from '../../../database/models/user.model';
 
 @Component({
   selector: 'page-contact',

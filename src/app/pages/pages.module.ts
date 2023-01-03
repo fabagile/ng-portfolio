@@ -6,7 +6,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ServicesComponent } from './services/services.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './footer/contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { CguComponent } from './footer/cgu/cgu.component';
 import { HelpComponent } from './footer/help/help.component';
@@ -24,9 +24,9 @@ const routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
   { path: 'footer/map', component: MapComponent },
+  { path: 'footer/contact', component: ContactComponent },
   { path: 'footer/faq', component: FaqComponent },
   { path: 'footer/help', component: HelpComponent },
   { path: 'footer/cgu', component: CguComponent },
