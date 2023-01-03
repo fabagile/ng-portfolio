@@ -6,7 +6,7 @@
           *ngFor="let link of pageLinks"
           [routerLink]="link.path"
           class="nav-link"
-          >{{ link.label|titlecase }}</a
+          >{{ link.label|uppercase }}</a
         >
       </div>
 
