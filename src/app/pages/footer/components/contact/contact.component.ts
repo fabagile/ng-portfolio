@@ -3,8 +3,9 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { UsersService } from 'src/app/services/users.service';
-import { User } from '../../../database/models/user.model';
+import { User } from 'src/app/database/models/user.model';
+import { UsersService } from 'src/app/shared/services/users.service';
+
 
 @Component({
   selector: 'page-contact',

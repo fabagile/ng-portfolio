@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { UsersService } from 'src/app/services/users.service';
+import { UsersService } from 'src/app/shared/services/users.service';
 import { User } from "src/app/database/models/user.model"
 
 @Component({

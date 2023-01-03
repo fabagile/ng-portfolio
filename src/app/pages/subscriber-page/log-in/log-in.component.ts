@@ -16,5 +16,9 @@ export class LogInComponent implements OnInit {
     console.log('déconnecté')
     this.router.navigateByUrl('')
   }
+  onGotoSignupPage() {
+    console.log('inscrivez-vous')
+    this.router.navigateByUrl('/subscribers/sign-up')
+  }
 
 }

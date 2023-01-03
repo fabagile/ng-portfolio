@@ -1,12 +1,12 @@
-import { AboutComponent } from './pages/about/about.component';
+import { AboutComponent } from './pages/main/about/about.component';
 import { ContactComponent } from './pages/footer/contact/contact.component';
-import { CguComponent } from './pages/footer/cgu/cgu.component';
+import { CguComponent } from './pages/footer/components/cgu/cgu.component';
 import { FaqComponent } from './pages/footer/faq/faq.component';
 import { HelpComponent } from './pages/footer/help/help.component';
 import { MapComponent } from './pages/footer/map/map.component';
 import { LandingPageComponent } from './home/landing-page.component';
-import { PortfolioComponent } from './pages/portfolio/portfolio.component';
-import { ServicesComponent } from './pages/services/services.component';
+import { PortfolioComponent } from './pages/main/portfolio/portfolio.component';
+import { ServicesComponent } from './pages/main/components/supplies/services.component';
 
 export const MAIN_LINKS = [
   {

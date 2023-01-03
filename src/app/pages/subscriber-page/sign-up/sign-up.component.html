@@ -3,13 +3,13 @@
   <div class="row justify-content-center">
     <div class="col-12 col-md-10 col-lg-8 col-xl-6">
       <small class="float-end text-primary position-relative pb-1 pe-2 fst-italic fw-semibold">* Champ requis</small>
-      <form [formGroup]="userForm">
+      <!-- <form [formGroup]="userForm">
         <fieldset *ngFor="let field of fields">
           <legend>{{ field.name }}</legend>
           <div *ngFor="let item of field.items" class="mb-2">
-            <!-- <label [for]="item.input" class="form-label">
+            <label [for]="item.input" class="form-label">
               {{item.label}}<form-required-field *ngIf="item.required==true"></form-required-field>
-            </label> -->
+            </label>
             <input
               [id]="item.input"
               [formControlName]="item.input"
@@ -46,10 +46,10 @@
             <button type="reset" class="btn btn-secondary text-uppercase">
               Recommencer
             </button>
-            <!-- <a routerLink="/contact" class="btn btn-danger">annuler</a> -->
+            <a routerLink="/contact" class="btn btn-danger">annuler</a>
           </div>
         </fieldset>
-      </form>
+      </form> -->
     </div>
 
     <!-- <div *ngIf="userPreview$ | async as user" class="card col-md-12">
