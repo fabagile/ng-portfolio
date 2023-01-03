@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary accent shadow px-2 sticky-top">
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-primary accent shadow px-2 sticky-top"
+>
   <a
     routerLink="/"
     routerLinkActive="router-link-active"
@@ -6,14 +8,11 @@
   >
     <img
       src="assets/pictures/logo/eagle logo flip.png"
-      height="28"
+      height="32"
       alt="logo"
-      class="me-1"
+      class="me-1 p-n1 rounded"
     />
-    <span class="" >
-      fabagile-portfolio
-
-    </span>
+    <span class=""> fabagile-portfolio </span>
   </a>
   <button
     aria-controls="navbarSupportedContent"
@@ -31,7 +30,7 @@
     [ngClass]="{ show: collapse == false }"
     id="navbarSupportedContent"
   >
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav lg-me-auto">
       <li
         (click)="collapse = true"
         *ngFor="let link of links"
@@ -43,33 +42,14 @@
           [routerLink]="link.path"
           class="nav-link text-light"
         >
-          <span class="badge p-1 rounded-circle">
-            <i class="icon fs-6 fa-fw fa-solid fa-{{ link.icon }}"></i>
-          </span>
+          <!-- <span class="badge p-1 rounded-circle">
+              <i class="icon fs-6 fa-fw fa-solid fa-{{ link.icon }}"></i>
+            </span> -->
           <span class="tag">
             {{ link.label }}
           </span>
         </a>
       </li>
     </ul>
-    <!-- <div>
-      <div class="collapse show" id="clock">
-        <div class="text-light">9:28</div>
-      </div>
-    </div> -->
-  </div>
-  <div class="float-end d-flex border-1 border-dark border-opacity-25 btn-group-vertical text-light">
-    <!-- <div
-      class="px-2 nav-link btn btn-lg bg-secondary "
-      routerLink="/subscribers/sign-up"
-    >
-      Inscription
-    </div> -->
-    <div
-      class="px-2 py-1 nav-link btn btn-lg border-1 border-secondary btn-success text-uppercase fw-semibold"
-      routerLink="/subscribers/log-in"
-    >
-      Connexion
-    </div>
   </div>
 </nav>

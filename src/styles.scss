@@ -9,22 +9,25 @@ app-root {
 }
 
 :root {
-  --pantone-2022: #6667ab;
-  --pantone-2023: #bb2649;
-  --primary: var(--pantone-2023);
-  --secondary: invert(var(--primary) !important);
+  // --pantone-2022: #6667ab;
+  // --pantone-2023: #bb2649;
+  // --primary: var(--pantone-2023);
+  // --secondary: var(--pantone-2022);
   // --secondary: var(--pantone-2022) !important;
 
-  --light: whitesmoke !important;
-  --dark: invert(var(--light));
+  // --light: whitesmoke !important;
+  // --dark: invert(var(--light));
 }
 
-$primary: var(--primary) !important;
-  $secondary: var(--secondary) !important;
+$pantone-2022: #6667ab;
+$pantone-2023: rgb(187, 38, 73);
+
+$primary: $pantone-2023 !important;
+  $secondary: rgb(68, 217, 182) !important;
 
 
-  $light: var(--light) !important;
-  $dark: var(--dark)  !important;
+  $light: rgb(245, 245, 245) !important;
+  $dark: rgb(10, 10, 10) !important;
 
 #banner {
   display: none;
@@ -103,17 +106,17 @@ a.btn {
   background: $primary;
 }
 .btn-primary {
-  border-color: $secondary !important;
+  border-color: rgb(68, 217, 182) !important;
 }
-
+.btn-secondary,
 .bg-secondary {
-  background: $secondary !important;
+  background-color: rgb(68, 217, 182) !important;
 }
 .border-primary {
   border-color: $primary !important;
 }
 .border-secondary {
-  border-color: $secondary !important;
+  border-color: rgb(68, 217, 182) !important;
 }
 
 .btn-shadow {
@@ -133,7 +136,7 @@ a:hover,
 }
 a:hover,
 .btn-primary:hover {
-  background: $secondary;
+  // background: rgb(68, 217, 182);
   border-color: $primary;
 }
 
@@ -151,10 +154,10 @@ app-error-page {
   background-color: $primary !important;
 }
 .accent-reverse {
-  color: $secondary !important;
+  color: rgb(68, 217, 182) !important;
 }
-a {
-  color: $secondary !important;
+a:hover, a:active {
+  color: rgb(68, 217, 182) !important;
 }
 .flip {
   transform: scaleX(-1);
