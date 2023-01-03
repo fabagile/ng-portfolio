@@ -9,9 +9,9 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 
 import { PagesModule } from './pages/pages.module';
 import { registerLocaleData } from '@angular/common';
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { NavbarComponent } from './layout/navbar/navbar.component';
+import { HeaderComponent } from './core/components/layout/header/header.component';
+import { FooterComponent } from './core/components/layout/footer/footer.component';
+import { NavbarComponent } from './core/components/layout/navbar/navbar.component';
 import { IconComponent } from './interface/icon/icon.component';
 
 @NgModule({

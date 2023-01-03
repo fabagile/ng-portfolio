@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LandingPageComponent } from 'src/app/home/landing-page.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ServicesComponent } from './services/services.component';

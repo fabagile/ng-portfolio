@@ -7,6 +7,7 @@ import { FOOTER_LINKS, SOCIAL_LINKS } from 'src/app/routes';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  year="2023"
   pageLinks = FOOTER_LINKS
   socialLinks = SOCIAL_LINKS
 
